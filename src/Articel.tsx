@@ -1,9 +1,9 @@
 import './App.css'
 
-export default function Article() {
+export default function Article(props) {
     return (
         <article>
-            <h2>Artikelüberschrift</h2>
+            <h2>props.title</h2>
             <p>Einleitung des Artikels...</p>
                 <ul className="test">
                 <li>Listenelement 1</li>
