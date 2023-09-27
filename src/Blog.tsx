@@ -11,6 +11,9 @@ export default function Blog() {
         { id: 3, title: 'Eintrag 3', content: 'Inhalt des Eintrags 3' }
     ];
 
+    function myCallbackFunction(info: string) {
+        console.log(info)
+    }
 
     return (
         <div>
@@ -20,7 +23,8 @@ export default function Blog() {
                 {articleEntries.map((article) => <Article
                     key={article.id}
                     title={article.title}
-                    content={article.content}/>)
+                    content={article.content}
+                    myCallback={myCallbackFunction}/>)
                 }
                 <CommentSection />
             </main>
